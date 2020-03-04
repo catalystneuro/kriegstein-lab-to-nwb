@@ -1,1 +1,1 @@
-# kriegstein_lab-to-nwb
+# kriegstein-lab-to-nwb
