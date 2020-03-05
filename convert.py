@@ -28,7 +28,10 @@ def get_metadata(abf_num, df):
             
     meta = {
         'NWBFile': {
-            'session_start_time': datetime.strptime(str(row['date'].values[0]),'%Y%m%d')
+            #'session_start_time': datetime.strptime(str(row['date'].values[0]),'%Y%m%d')
+            'session_id': str(abf_num),
+            'experimenter': 'Li Zhou',
+            'institution': 'UCSF'
         },
         'Subject': {
             'species': 'homo sapiens',
@@ -41,6 +44,9 @@ def get_metadata(abf_num, df):
         }
     }
     return meta
+
+df = pd.read_csv('/Volumes/easystore5T/data/DANDI/nwb_lizhou/recieved/lizhou_meta_denormalized.csv')
+df
 
 df = pd.read_csv('/Volumes/easystore5T/data/DANDI/nwb_lizhou/recieved/lizhou_meta_denormalized.csv')
 
